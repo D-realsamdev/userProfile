@@ -103,19 +103,20 @@ class _ViewProfileScreenState extends State<ViewProfileScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  Icons.star,
-                  size: 24.0,
-                  color: MyColors.rating,
-                ),
+                Icon(Icons.star, size: 16, color: MyColors.rating),
+                Icon(Icons.star, size: 16, color: MyColors.rating),
+                Icon(Icons.star, size: 16, color: MyColors.rating),
+                Icon(Icons.star, size: 16, color: MyColors.rating),
+                Icon(Icons.star, size: 16, color: MyColors.rating),
                 SizedBox(
                   width: 8.0,
                 ),
                 Text(
-                  "4.5",
+                  "5.0",
                   style: TextStyle(
                     fontSize: 18.0,
-                    color: Colors.grey[700],
+                    fontWeight: FontWeight.w700,
+                    color: MyColors.textColor,
                   ),
                 ),
               ],
@@ -173,18 +174,23 @@ class _ViewProfileScreenState extends State<ViewProfileScreen> {
                           color: MyColors.primaryColor,
                         ),
                         SizedBox(
-                          width: 8.0,
-                        ),
-                        Text(
-                          "ajakayedamilola@gmail.com",
-                          style: TextStyle(
-                            fontSize: 18.0,
-                            color: Colors.grey[700],
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.02,
+                                          ),
+                        Expanded(
+                          child: Text(
+                            "samdee@gmail.com",
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              color: Colors.grey[700],
+                            ),
+                            overflow: TextOverflow.clip,
                           ),
-                          overflow: TextOverflow.clip,
                         ),
                         Spacer(),
-                        Flexible(
+                        Expanded(
                           child: Text(
                             "Experience",
                             style: TextStyle(
@@ -195,6 +201,7 @@ class _ViewProfileScreenState extends State<ViewProfileScreen> {
                         ),
                       ],
                     ),
+                    
                     SizedBox(
                       height: 8.0,
                     ),
@@ -743,7 +750,184 @@ class _ViewProfileScreenState extends State<ViewProfileScreen> {
                           ],
                         ),
                       ),
-                    )
+                    ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
+                    Card(
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(
+                          color: MyColors.border,
+                        ),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(12)),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(20.0),
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: MyColors.primaryColor,
+                                  ),
+                                  SizedBox(
+                                    width: 8.0,
+                                  ),
+                                  Text(
+                                    "Ratings and Reviews (8)",
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.w700,
+                                      color: MyColors.textColor,
+                                    ),
+                                  ),
+                                  Spacer(),
+                                  Text(
+                                    "See more",
+                                    style: TextStyle(
+                                      fontSize: 12.0,
+                                      fontWeight: FontWeight.w500,
+                                      color: MyColors.textColor,
+                                      decoration: TextDecoration
+                                          .underline, // underline property
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Divider(
+                              thickness: 2,
+                              color: MyColors.border,
+                            ),
+                            Padding(
+                                padding: const EdgeInsets.all(22.0),
+                                child: Container(
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          CircleAvatar(
+                                            radius: 25,
+                                            backgroundImage: AssetImage(
+                                                'images/profile1.png'),
+                                          ),
+                                          SizedBox(width: 10),
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'Allen Daniels',
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Icon(Icons.star,
+                                                      size: 16,
+                                                      color: MyColors.rating),
+                                                  Icon(Icons.star,
+                                                      size: 16,
+                                                      color: MyColors.rating),
+                                                  Icon(Icons.star,
+                                                      size: 16,
+                                                      color: MyColors.rating),
+                                                  Icon(Icons.star,
+                                                      size: 16,
+                                                      color: MyColors.rating),
+                                                  Icon(Icons.star,
+                                                      size: 16,
+                                                      color: MyColors.rating),
+                                                  SizedBox(width: 5),
+                                                  Text(
+                                                    '5.0',
+                                                    style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: MyColors.textColor,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                          Spacer(),
+                                          Text(
+                                            '17 hours ago',
+                                            style: TextStyle(
+                                              fontSize: 14,
+                                              color: MyColors.textColor,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 15.0,
+                                      ),
+                                      Text(
+                                        'There has been a password update on your account. Kindly reach out to us immediately if this isn’t your doing. There has been a password update on your account. Kindly reach out to us immediately if this isn’t your doing. There has been a password update on your account. Kindly reach out to us immediately if this isn’t your doing. ',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 8.0,
+                                      ),
+                                      Divider(
+                                        thickness: 1.5,
+                                      ),
+                                      SizedBox(
+                                        height: 8.0,
+                                      ),
+                                      SizedBox(
+                                        width: double.infinity,
+                                        height: 70.0,
+                                        child: ElevatedButton(
+                                          onPressed: () {
+                                            // handle button press
+                                          },
+                                          style: ButtonStyle(
+                                            backgroundColor:
+                                                MaterialStateProperty.all<
+                                                    Color>(Colors.white),
+                                            shape: MaterialStateProperty.all<
+                                                RoundedRectangleBorder>(
+                                              RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                                side: BorderSide(
+                                                    color:
+                                                        MyColors.primaryColor),
+                                              ),
+                                            ),
+                                          ),
+                                          child: Text(
+                                            'Write a Review',
+                                            style: TextStyle(
+                                              color: MyColors.primaryColor,
+                                              fontSize: 17.0,
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
                   ],
                 ),
               ),
